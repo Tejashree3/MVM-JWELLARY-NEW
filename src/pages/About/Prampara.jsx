@@ -21,8 +21,8 @@ const Prampara = () => {
           style={{ backgroundImage: `url(${img})` }}    >
 
           <div className='container grid grid-cols-2'>
-            <div className='flex justify-end items-center'>
-              <div className='pr-25'>
+            <div className='flex justify-start items-center'>
+              <div className=''>
 
                 <img src={img1} alt="" className='pb-10 w-[476px]' />
                 <img src={img2} alt="" />

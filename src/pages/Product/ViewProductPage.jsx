@@ -86,9 +86,9 @@ const ViewProductPage = () => {
                 </div>
             </div>
 
-                <div className="container mx-auto py-24 flex    gap-12">
-                    <div className="w-1/2">
-                        <div className="relative flex gap-5">
+                <div className="container mx-auto py-24 flex flex-col md:flex-row   gap-12">
+                    <div className=" w-full md:w-1/2">
+                        <div className="relative flex justify-center gap-5">
                             <img
                                 src={product.images[currentImage]}
                                 alt="Product"
@@ -128,7 +128,7 @@ const ViewProductPage = () => {
                         </div>
                     </div>
 
-                    <div className="w-1/2 flex flex-col gap-2 pr-20 pl-10  ">
+                    <div className=" w-full md:w-1/2 flex flex-col gap-2 md:pr-20 pr-0 md:pl-10 pl-0  ">
                         <h2 className="text-md font-medium pb-1 text-[#8F8F8F]">{product.title}</h2>
                         <h2 className="text-4xl font-semibold">{product.name}</h2>
                         <div className='flex items-center py-5 border-b border-dashed justify-between'>

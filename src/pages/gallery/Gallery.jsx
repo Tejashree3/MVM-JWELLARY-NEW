@@ -11,6 +11,7 @@ import { GrGallery } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../../constant'
 import { motion } from 'framer-motion'
+import img3 from "../../assets/logo.png"
 
 const galleryimg = {
     images: [
@@ -27,17 +28,33 @@ const galleryimg = {
 const Gallery = () => {
     return (
         <div>
+
+            
+
+
+              
             <div className=''>
 
-                <div className='bg-cover flex justify-center items-center bg-no-repeat bg-center w-full min-h-screen py-30'
+                <div className='bg-cover justify-center items-center bg-no-repeat bg-center w-full min-h-screen '
 
                     style={{ backgroundImage: `url(${img})` }}
                 >
-
                     <div className='container max-auto '>
-                        <div className='min-h-screen'>
+    <nav className="bg-transparent py-8 px-10 mb-5">
+        <div className=" mx-auto flex justify-between items-center">
 
-                            <div className='flex gap-7 flex-col md:flex-row'>
+          <Link to="/">
+          <img
+            src={img3}
+            alt="Logo"
+            className="h-12 w-auto"
+          />
+          </Link>
+        </div>
+      </nav>
+                    <div className='min-h-screen pt-4 pb-20 '>
+
+                            <div className='flex  gap-7 flex-col md:flex-row'>
                                 <div className='w-full max-w-[230px]'>
 
                                     <img src={title} alt="" className='w-full max-w-[249px] mb-1' />
@@ -59,16 +76,17 @@ const Gallery = () => {
                             </div>
                         
 
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20">
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-20">
   {galleryimg.images.map((gal, index) => (
     <div
       key={index}
-      className="relative group effect effect-six overflow-hidden gallery-img  shadow-lg"
+      className="relative group effect effect-six overflow-hidden   shadow-lg"
     >
       <img
         src={gal.src}
         alt={gal.title}
-        className="w-full h-[180px] grayscale group-hover:grayscale-0 object-cover transition-transform duration-300 group-hover:scale-105"
+        className="w-full md:h-[180px] h-full 
+         object-cover transition-transform duration-300 group-hover:scale-105"
       />
 
       <p className="absolute max-w-[130px] p-2 m-[30px] text-right text-sm leading-tight opacity-0 transition-all duration-300 bottom-0 right-0 border-r-4 border-white text-white">
@@ -81,15 +99,13 @@ const Gallery = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
-            className="p-2 bg-gray-800 text-white rounded-md transition-transform duration-300"
+            className="p-2  text-white rounded-md transition-transform duration-300"
           >
-            <motion.div
-              initial={{ scale: 1 }}
-              whileHover={{ scale: 0 }}
-              transition={{ duration: 0.3 }}
+            <div
+             
             >
               <GrGallery />
-            </motion.div>
+            </div>
           </motion.button>
         </Link>
       </div>

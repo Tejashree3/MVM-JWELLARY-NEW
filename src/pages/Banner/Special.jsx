@@ -13,7 +13,7 @@ import img6 from "../../assets/special/mangalsutra.png"
 const Special = () => {
   return (
     <div>
-      <div className='flex justify-center items-center flex-col gap-3 py-30'>
+      <div className='flex justify-center items-center flex-col gap-3 py-24'>
         <img src={img4} alt="" />
 <img src={img5} alt="" />
 <img src={img3} alt="" />

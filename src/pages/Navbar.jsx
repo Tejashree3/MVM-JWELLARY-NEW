@@ -88,7 +88,7 @@ const Navbar = () => {
     { name: "Gifting", path: ROUTES.GIFTING },
     { name: "Collections", path: ROUTES.COLLECTIONS },
     { name: "Gallery", path: ROUTES.GALLERY },
-    { name: "Blog", path: ROUTES.BLOG },
+    // { name: "Blog", path: ROUTES.BLOG },
 
     { name: "About", path: ROUTES.ABOUT },
     { name: "Contact Us", path: ROUTES.CONTACT },
@@ -107,39 +107,35 @@ const Navbar = () => {
         variants={innerVariants}
         className="bg-gray-200 shadow-md mx-auto transition-all duration-400"
       >
-        <div className="container flex justify-between items-center py-5">
+        <div className="container flex justify-between items-center py-3">
           <div>
             <Link to={ROUTES.HOME}>
               <img className="h-10 w-auto" src={logo} alt="Your Company" />
             </Link>
           </div>
-
           <div className="hidden md:flex items-center space-x-6">
-            {links.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={link.onClick}
-                className="relative text-primary font-medium text-lg transition duration-300 hover:text-[#57321A]"
-              >
-                {link.name}
-                {location.pathname === link.path && (
-                  <motion.div
-                    layoutId="underline"
-                    className="absolute left-0 bottom-[-2px] h-0.5 bg-[#57321A]"
-                    initial={{ width: 0 }}
-                    animate={{ width: "100%" }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-              </Link>
-            ))}
-          </div>
+  {links.map((link) => (
+    <Link
+      key={link.name}
+      to={link.path}
+      className="relative text-primary font-medium text-lg transition duration-300 hover:text-[#57321A] group"
+    >
+      {link.name}
+      <div
+        className={`absolute left-0 bottom-0 h-[2px] bg-[#57321A] transition-all duration-300 
+          ${location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"}`}
+      />
+    </Link>
+  ))}
+</div>
+
+
 
           <div className="md:hidden">
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              className="p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2
+               focus:ring-gray-500"
               aria-label="Toggle Menu"
               animate={isOpen ? "open" : "closed"}
               variants={iconVariants}
@@ -187,7 +183,7 @@ const Navbar = () => {
             variants={wrapperVariants}
             className="md:hidden bg-gray-100 origin-top"
           >
-            <div className="pl-8 pb-3 space-y-2">
+            <div className="pl-9 pb-3 space-y-2">
               {links.map((link) => (
                 <motion.div key={link.name} variants={itemVariants}>
                   <Link

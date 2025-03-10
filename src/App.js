@@ -12,6 +12,7 @@ import Products from "./pages/Product/Products";
 import ViewProductPage from "./pages/Product/ViewProductPage";
 import Gallery from "./pages/gallery/Gallery";
 import ViewGallery from "./pages/gallery/ViewGallery";
+import Collection from "./pages/collection/Collection";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -39,11 +40,12 @@ function App() {
         <Route path={ROUTES.HOME} element={<Home />} />
          <Route path={ROUTES.ABOUT} element={<About />} />
       <Route path={ROUTES.CONTACT} element={<Contact />} />
-        {/*<Route path={ROUTES.PRODUCTS} element={<Products />} /> 
+        <Route path={ROUTES.PRODUCTS} element={<Products />} /> 
         <Route path={ROUTES.PRODUCTVIEW} element={<ViewProductPage />} />
         <Route path={ROUTES.GALLERY} element={<Gallery />} />
+        <Route path={ROUTES.COLLECTIONS} element={<Collection />} /> 
 
-        <Route path={ROUTES.GALLERYVIEW} element={<ViewGallery />} /> */}
+        <Route path={ROUTES.GALLERYVIEW} element={<ViewGallery />} /> 
 
 
       </Routes>

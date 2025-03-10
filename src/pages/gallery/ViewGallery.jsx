@@ -11,6 +11,7 @@ import { GrGallery } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../../constant'
 import { motion } from 'framer-motion'
+import img3 from "../../assets/logo.png"
 
 const galleryimg = {
     images: [
@@ -29,13 +30,26 @@ const ViewGallery = () => {
         <div>
             <div className=''>
 
-                <div className='bg-cover flex justify-center items-center bg-no-repeat bg-center w-full min-h-screen py-30'
+                <div className='bg-cover flex justify-center items-center bg-no-repeat bg-center w-full min-h-screen '
 
                     style={{ backgroundImage: `url(${img})` }}
                 >
 
                     <div className='container max-auto '>
-                        <div className='min-h-screen'>
+
+                      <nav className="bg-transparent py-8 px-10 mb-5">
+                              <div className=" mx-auto flex justify-between items-center">
+                      
+                                <Link to="/">
+                                <img
+                                  src={img3}
+                                  alt="Logo"
+                                  className="h-12 w-auto"
+                                />
+                                </Link>
+                              </div>
+                            </nav>
+                        <div className='min-h-screen pt-4 pb-20'>
 
                             <div className='flex gap-7 flex-col '>
                                 <div className=''>
@@ -56,7 +70,7 @@ const ViewGallery = () => {
                             </div>
                         
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-20">
   <div className="md:col-span-1 overflow-hidden">
     <img
       src={galleryimg.images[0].src}
@@ -65,7 +79,7 @@ const ViewGallery = () => {
     />
   </div>
 
-  <div className="md:col-span-2 grid grid-cols-2 gap-4">
+  <div className="md:col-span-2 grid  sm:grid-cols-2 px-3  grid-cols-1 gap-4">
     {galleryimg.images.slice(1, 5).map((gal, index) => (
       <div key={index} className="overflow-hidden shadow-lg">
         <img
@@ -77,13 +91,13 @@ const ViewGallery = () => {
     ))}
   </div>
 
-  <div className="md:col-span-3 grid grid-cols-4 gap-4">
+  <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2   md:grid-cols-4  gap-6">
     {galleryimg.images.slice(4, 9).map((gal, index) => (
       <div key={index} className="overflow-hidden shadow-lg">
         <img
           src={gal.src}
           alt={gal.title}
-          className="w-full h-[150px] border-design object-cover transition-transform duration-300 hover:scale-105"
+          className="w-full h-full border-design object-cover transition-transform duration-300 hover:scale-105"
         />
       </div>
     ))}

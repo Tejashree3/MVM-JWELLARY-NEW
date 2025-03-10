@@ -13,7 +13,7 @@ const Soundarya = () => {
   return (
 <div className="">
     <div className="pb-10 pt-16 flex justify-center items-center flex-col">
-<img src={s} alt="" />
+<img src={s} alt="" className="pb-4" />
 <img src={strip1} alt="" />
     </div>
     <div className="grid md:grid-cols-3 ">
@@ -22,9 +22,9 @@ const Soundarya = () => {
         <img src={s1} alt="Modern Design" className="w-full h-100vh object-cover" />
         <div className="absolute bottom-0 w-full bg-gradient-to-t gap-3 from-black/70 to-transparent 
         flex justify-center items-center flex-col text-white px-12 py-8">
-<img src={design} alt="" />
+<img src={design} alt="" className="" />
  <img src={strip} alt="" />
-          <p className="text-sm">स्टाईलची नवी परिभाषा, आधुनिकतेच्या स्पर्शाने</p>
+          <p className="text-xl">स्टाईलची नवी परिभाषा, आधुनिकतेच्या स्पर्शाने</p>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ const Soundarya = () => {
 <img src={silver} alt="" />
       <img src={strip} alt="" />
 
-          <p className="text-sm">चांदीची झळाळी, तुमच्या घराचं वैभव</p>
+          <p className="text-xl">चांदीची झळाळी, तुमच्या घराचं वैभव</p>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const Soundarya = () => {
         <div className="absolute bottom-0 w-full bg-gradient-to-tnb gap-3 from-black/70 to-transparent flex justify-center items-center flex-col text-white px-12 py-8">
 <img src={set} alt="" />          <img src={strip} alt="" />
 
-          <p className="text-sm">तुमच्या सौंदर्याला गाणारा प्रत्येक मनमोहक दागिना</p>
+          <p className="text-xl">तुमच्या सौंदर्याला गाणारा प्रत्येक मनमोहक दागिना</p>
         </div>
       </div>
     </div>

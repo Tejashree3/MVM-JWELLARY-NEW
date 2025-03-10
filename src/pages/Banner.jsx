@@ -41,13 +41,13 @@ export default function ImageSlider() {
 
         <button
           onClick={() => paginate(-1)}
-          className="absolute xl:left-110 left-10 top-120 -translate-y-1/2 bg-[#D9D9D9] text-[#717171] p-3 md:p-4 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
+          className="absolute xl:left-1/3 left-10 top-2/3 -translate-y-1/2 bg-[#D9D9D9] text-[#717171] p-3 md:p-4 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
         >
           ❮
         </button>
         <button
           onClick={() => paginate(1)}
-          className="absolute right-10 xl:right-110 top-120 -translate-y-1/2 bg-[#D9D9D9] text-[#717171] p-3 md:p-4 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
+          className="absolute right-10 xl:right-1/3 top-2/3 -translate-y-1/2 bg-[#D9D9D9] text-[#717171] p-3 md:p-4 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
         >
           ❯
         </button>

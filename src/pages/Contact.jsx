@@ -29,9 +29,10 @@ const Contact = () => {
 
     <div className="container">
 
-    <div className=" flex flex-col md:flex-row p-2 md:p-2 rounded-lg shadow-lg w-full max-w-5xl mx-auto">
-      <div className="relative overflow-hidden bg-[#660033] text-white poppins pl-10 pt-10 pb-10 pr-5
-       rounded-bl-lg rounded-tl-lg md:w-[430px] gap-24 flex flex-col justify-center">
+    <div className=" flex flex-col md:flex-row p-0 md:p-2 rounded-lg shadow-lg w-full max-w-5xl mx-auto">
+    <div className=" overflow-hidden bg-[#660033] text-white poppins md:pl-10 pl-3 pt-10 pb-10 md:pr-5
+pr-3       rounded-bl-lg rounded-tl-lg md:w-[430px] gap-24 flex flex-col justify-center relative">
+
         <div>
           <h2 className="text-2xl  poppins font-semibold">Contact Information</h2>
           <p className="mt-3 poppins font-normal text-md">Say something to start a live chat!</p>
@@ -62,7 +63,7 @@ const Contact = () => {
       transition={{ duration: 0.7, ease: "easeOut" }}
 
       
-      className="bg-[#490025] -bottom-22 -right-22 absolute rounded-full w-[250px] h-[250px]">
+      className="bg-[#490025] -bottom-24 -right-24 absolute rounded-full w-[250px] h-[250px]">
 
 </motion.div>
 
@@ -72,7 +73,7 @@ initial={{scale:0, opacity:0 }}
 animate={{scale:1, opacity:1 }}
 transition={{ duration: 0.9, ease: "easeOut" }}
 
-className="bg-[#600130] bottom-20 shadow-lg right-16 absolute rounded-full w-[105px] h-[105px]">
+className="absolute bg-[#600130] bottom-20 shadow-lg right-16  rounded-full w-[105px] h-[105px]">
 
 </motion.div>
 

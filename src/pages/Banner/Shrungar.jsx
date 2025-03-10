@@ -13,6 +13,8 @@ import pin from "../../assets/purusharth/pin.png";
 import ring from "../../assets/purusharth/ring.png";
 import mala from "../../assets/purusharth/mala.png";
 import brecleate from "../../assets/purusharth/brecleate.png";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../constant";
 
 const products = [
     { name: "ब्रोजेस", image: brooch },
@@ -54,8 +56,10 @@ const Shrungar = () => {
                             >
                                 {products.map((product, index) => (
                                     <SwiperSlide key={index} className="flex flex-col justify-center items-center">
+   <Link to={ROUTES.PRODUCTS}>
+                                        
                                         <img src={p2} alt="Placeholder" className="mb-5   h-52" />
-                                        <img src={product.image} alt={product.name} />
+                                      </Link>                                                <img src={product.image} alt={product.name} />
                                     </SwiperSlide>
                                 ))}
                             </Swiper>

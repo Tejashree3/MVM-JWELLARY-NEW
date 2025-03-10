@@ -28,7 +28,7 @@ const About = () => {
     <div className='' >
         <div className='grid grid-cols-1 md:grid-cols-2 '>
             <div className='min-h-screen bg-cover'>
-              <img src={img1} alt="" className='h-[100%]'/>
+              <img src={img1} alt="" className='w-full h-screen'/>
             </div>
             <div className="min-h-screen bg-cover" style={{ backgroundImage: `url(${img2})`, backgroundRepeat: "no-repeat" }}>
               <div className="flex p-6 text-white flex-col justify-center items-start">
