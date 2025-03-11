@@ -11,7 +11,7 @@ import { GrGallery } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../../constant'
 import { motion } from 'framer-motion'
-import img3 from "../../assets/logo.png"
+import img3 from "../../assets/MVM3.png"
 
 const galleryimg = {
     images: [
@@ -47,12 +47,12 @@ const Gallery = () => {
           <img
             src={img3}
             alt="Logo"
-            className="h-12 w-auto"
+            className="h-24 w-auto"
           />
           </Link>
         </div>
       </nav>
-                    <div className='min-h-screen pt-4 pb-20 '>
+                    <div className='min-h-screen flex justify-center items-center flex-col pt-4 pb-20 '>
 
                             <div className='flex  gap-7 flex-col md:flex-row'>
                                 <div className='w-full max-w-[230px]'>

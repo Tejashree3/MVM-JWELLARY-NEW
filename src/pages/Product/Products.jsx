@@ -45,12 +45,12 @@ const Products = () => {
                         <div className='mb-6'>
                             <Link to={ROUTES.HOME}>
                             
-                            <img src={img2} alt="" />
+                            <img src={img2} alt="" className='w-44' />
                             </Link>
                         </div>
                         <div className=' grid md:grid-cols-2 items-end'>
                             <div className=''>
-                                <img src={img3} alt="" />
+                                <img src={img3} alt="" className='w-60'/>
                             </div>
                             <div className=''>
                                 <img src={img4} alt="" />
@@ -60,10 +60,10 @@ const Products = () => {
                 </div>
 
 <div className='container'>
-<div className='flex justify-end'>
+<div className='flex justify-end pt-6'>
 <p className='font-light text-sm'>200 Results</p>
 </div>
-<div className="flex min-h-screen px-6 py-15">
+<div className="flex min-h-screen px-6 flex-col sm:flex-row  py-15">
       <div className="w-[284px]  p-4">
         <div className='border-b  '>
 
@@ -83,7 +83,7 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="w-[1000px] p-4 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="w-full h-[500px] p-4 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
           <div key={product.id} className="card">
 <div className="relative group">

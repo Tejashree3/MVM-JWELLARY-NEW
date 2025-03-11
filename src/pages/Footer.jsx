@@ -75,10 +75,10 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center gap-4 py-4">
-          <FaFacebookF className="text-black text-2xl bg-white p-1 cursor-pointer rounded-md hover:opacity-80" />
-          <FaInstagram className="text-black text-2xl cursor-pointer bg-white p-1  rounded-md hover:opacity-80" />
-          <FaTwitter className="text-black text-2xl cursor-pointer bg-white rounded-md p-1 hover:opacity-80" />
-          <FaTelegram className="text-black text-2xl cursor-pointer bg-white  rounded-md p-1 hover:opacity-80" />
+          <FaFacebookF className="text-[#6B2929] text-2xl bg-white p-1 cursor-pointer rounded-md hover:opacity-80" />
+          <FaInstagram className="text-[#6B2929] text-2xl cursor-pointer bg-white p-1  rounded-md hover:opacity-80" />
+          <FaTwitter className="text-[#6B2929] text-2xl cursor-pointer bg-white rounded-md p-1 hover:opacity-80" />
+          <FaTelegram className="text-[#6B2929] text-2xl cursor-pointer bg-white  rounded-md p-1 hover:opacity-80" />
         </div>
 </div>
 

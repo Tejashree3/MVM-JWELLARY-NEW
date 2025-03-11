@@ -18,7 +18,7 @@ import { ROUTES } from "../../constant";
 
 const products = [
   { name: "ब्रोजेस", image: brooch },
-  { name: "माळा", image: mala },
+  { name: "माळा", image: brooch },
   { name: "ब्रॅसलेट", image: brecleate },
   { name: "अंगठी", image: ring },
   { name: "टाय पिन्स", image: pin },
@@ -29,7 +29,7 @@ const Parampara = () => {
     <div className="">
               <div
                   style={{ backgroundImage: `url(${p1})` }}
-                  className="bg-cover bg-no-repeat bg-center w-full h-screen"
+                  className="bg-cover bg-no-repeat bg-center w-full flex justify-center items-center custom-height-1"
               >
                   <div className="container">
                       <div className="flex justify-end items-center pt-10 md:pt-10 pb-20 flex-col w-full max-w-[850px]">
@@ -48,11 +48,11 @@ const Parampara = () => {
                                   modules={[Navigation]}
                                   className="mySwiper"
                                   breakpoints={{
-                                      300:{slidesPerView:2},
-                                      320: { slidesPerView: 3, },
-                                      600: { slidesPerView: 3, },
-                                      768: { slidesPerView: 4, },
-                                      1024: { slidesPerView: 5, },
+                                    320: { slidesPerView: 1 }, 
+                                    480: { slidesPerView: 2 }, 
+                                    640: { slidesPerView: 3 }, 
+                                    768: { slidesPerView: 4 }, 
+                                    1024: { slidesPerView: 5 }, 
                                   }}
                               >
                                   {products.map((product, index) => (

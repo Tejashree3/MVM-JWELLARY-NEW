@@ -15,7 +15,7 @@ const AboutPeople3 = () => {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="w-full   px-6">
-          <h2 className="text-3xl font-semibold text-primary">वारसा पुढे नेणारे</h2>
+          <h2 className="text-4xl font-semibold text-primary">वारसा पुढे नेणारे</h2>
           <p className="text-2xl baloo text-black mt-4">
           [दुसऱ्या पिढीचे नाव] यांनी आपल्या वडिलांचा वारसा पुढे नेत, आधुनिकतेची जोड देत व्यवसायाचा विस्तार केला. 
           जुन्या परंपरांना टिकवून ठेवत त्यांनी नव्या तंत्रज्ञानाचा आणि आधुनिक डिझाइनचा अवलंब केला.</p>
