@@ -8,9 +8,12 @@ import set from "../../assets/soundary/set.png";
 import design from "../../assets/soundary/design.png";
 import strip1 from "../../assets/soundary/strip.png";
 import s from "../../assets/soundary/s.png";
+import Ribben from "../Ribben";
 
 const Soundarya = () => {
   return (
+
+    <>
 <div className="">
     <div className="pb-10 pt-16 flex justify-center items-center flex-col">
 <img src={s} alt="" className="pb-4" />
@@ -22,7 +25,7 @@ const Soundarya = () => {
         <img src={s1} alt="Modern Design" className="w-full custom-height  object-cover" />
         <div className="absolute bottom-0 w-full bg-gradient-to-t gap-3 from-black/70 to-transparent 
         flex justify-center items-center flex-col text-white px-12 py-8">
-<img src={design} alt="" className="" />
+<img src={design} alt=""  />
  <img src={strip} alt="" />
           <p className="text-xl">स्टाईलची नवी परिभाषा, आधुनिकतेच्या स्पर्शाने</p>
         </div>
@@ -50,7 +53,8 @@ const Soundarya = () => {
       </div>
     </div>
 </div>
-
+<Ribben/>
+</>
   );
 };
 

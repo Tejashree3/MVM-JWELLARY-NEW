@@ -13,12 +13,12 @@ const About = () => {
 
 
     <div className='' >
-        <div className='grid grid-cols-1 md:grid-cols-2 '>
-            <div className='custom-height-2 bg-cover'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 '>
+            <div className=' h-full bg-cover'>
               <img src={img1} alt="" className='w-full h-full  bg-cover '/>
             </div>
-            <div className="custom-height-2 bg-cover" style={{ backgroundImage: `url(${img2})`, backgroundRepeat: "no-repeat" }}>
-              <div className=" min-h-screen flex md:px-16 px-2 py-6 text-white flex-col justify-center items-start">
+            <div className="h-full bg-cover" style={{ backgroundImage: `url(${img2})`, backgroundRepeat: "no-repeat" }}>
+              <div className=" h-full flex md:px-16 px-2 py-6 text-white flex-col justify-center items-start">
                 <h2 className='font-bold text-3xl  py-2 rounded-md'>
                   मल्लाप्पा विराप्पा मजती (MVM) <br/>
                   1918 पासून विश्‍वास आणि परंपरेचा वारसा
@@ -32,14 +32,14 @@ const About = () => {
                 </p>
                 <ul className='mt-6 space-y-3 '>
                   <li className='flex font-bold items-center text-3xl'><span className='text-white text-6xl mr-2'>•</span>आमची खास वैशिष्ट्ये</li>
-                  <li className='pl-6 flex font-semibold items-center text-2xl'>परंपरा आणि आधुनिकतेचा मिलाफ</li>
-                  <li className='pl-6 flex font-light items-center text-xl'>आम्ही पारंपरिक डिझाईन्सना आधुनिकतेची साज चढवून ग्राहकांसाठी
+                  <li className='flex font-semibold items-center text-2xl'>परंपरा आणि आधुनिकतेचा मिलाफ</li>
+                  <li className='flex font-light items-center text-xl'>आम्ही पारंपरिक डिझाईन्सना आधुनिकतेची साज चढवून ग्राहकांसाठी
                   अनोखी आणि आकर्षक ज्वेलरी तयार करतो.</li>
-                  <li className='pl-6 flex font-semibold items-center text-2xl pt-3'>उच्च दर्जाची शुद्धता</li>
-                 <li className='pl-6 flex font-light items-center text-xl'>प्रत्येक दागिना शुद्ध सोने, चांदी आणि दर्जेदार रत्नांनी बनवलेला असतो. 
+                  <li className='flex font-semibold items-center text-2xl pt-3'>उच्च दर्जाची शुद्धता</li>
+                 <li className='flex font-light items-center text-xl'>प्रत्येक दागिना शुद्ध सोने, चांदी आणि दर्जेदार रत्नांनी बनवलेला असतो. 
                  आमच्या गुणवत्तेची खात्री ही आमची ओळख आहे.</li>
-                  <li className='pl-6 flex font-semibold items-center text-2xl'>नवरदेव-नवराई कलेक्शन</li>
-               <li className='pl-6 flex font-light items-center text-xl'>खास विवाह समारंभासाठी नवरदेव व नवरीसाठी आकर्षक आणि 
+                  <li className='flex font-semibold items-center text-2xl'>नवरदेव-नवराई कलेक्शन</li>
+               <li className='flex font-light items-center text-xl'>खास विवाह समारंभासाठी नवरदेव व नवरीसाठी आकर्षक आणि 
                वैविध्यपूर्ण कलेक्शन्स – रुबाब, नवराई इत्यादी.</li>
                 </ul>
               </div>

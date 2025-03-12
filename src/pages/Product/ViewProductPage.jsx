@@ -87,12 +87,12 @@ const ViewProductPage = () => {
             </div>
 
                 <div className="container mx-auto py-24 flex flex-col md:flex-row   gap-12">
-                    <div className=" w-full md:w-1/2">
-                        <div className="relative flex justify-center gap-5">
+                    <div className=" w-full md:w-1/2 px-4">
+                        <div className="relative flex  justify-start gap-5">
                             <img
                                 src={product.images[currentImage]}
                                 alt="Product"
-                                className="w-full max-w-md  min-h[610px] object-cover rounded-lg"
+                                className="  min-h[610px] object-cover rounded-lg"
                             />
                             <div className='flex flex-col justify-between'>
                                 <div className='flex flex-col gap-4'>
@@ -128,7 +128,7 @@ const ViewProductPage = () => {
                         </div>
                     </div>
 
-                    <div className=" w-full md:w-1/2 flex flex-col gap-2 md:pr-20 pr-0 md:pl-10 pl-0  ">
+                    <div className=" w-full md:w-1/2 flex flex-col gap-2 md:pr-0 pr-0   ">
                         <h2 className="text-md font-medium pb-1 text-[#8F8F8F]">{product.title}</h2>
                         <h2 className="text-4xl font-semibold">{product.name}</h2>
                         <div className='flex items-center py-5 border-b border-dashed justify-between'>

@@ -112,14 +112,14 @@ import { FaArrowRight } from "react-icons/fa";
         </div>
       </nav>
       <div className="relative pb-8">
-  <div className="absolute inset-0 pb-8 bg-[#660033] mix-blend-overlay opacity-90 z-10"></div>
+  <div className="absolute inset-0 pb-8 bg-[#660033] mix-blend-overlay"></div>
 
-  <div className=" z-10">
+  <div className=" ">
     {collections.map((collection, index) => (
       <div key={index} className="container mb-10">
         
         <div className="flex items-end pt-2 pb-8 relative">
-          <img src={collection.title} alt="" />
+          <img src={collection.title} alt="" className="z-10"/>
 
           <div className="flex-grow border-b border-dashed border-white mx-3"></div>
 
@@ -135,7 +135,7 @@ import { FaArrowRight } from "react-icons/fa";
             <div
               key={i}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-transform 
-              duration-300 ease-in-out hover:translate-y-[-10px] hover:shadow-2xl hover:scale-105"
+              duration-300 ease-in-out z-10 hover:translate-y-[-10px] hover:shadow-2xl hover:scale-105"
             >
               <img src={item.img} alt={item.name} className="w-full h-48 object-cover" />
               <div className="px-4 py-3">

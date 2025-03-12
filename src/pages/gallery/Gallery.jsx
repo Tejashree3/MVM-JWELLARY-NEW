@@ -7,6 +7,11 @@ import title from "../../assets/gallery/title.png"
 import g1 from "../../assets/gallery/g1.png"
 import g2 from "../../assets/gallery/g2.png"
 import g3 from "../../assets/gallery/g3.png"
+import g4 from "../../assets/gallery/g4.png"
+import g5 from "../../assets/gallery/g5.png"
+import g6 from "../../assets/gallery/g6.png"
+import g7 from "../../assets/gallery/g7.png"
+
 import { GrGallery } from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../../constant'
@@ -18,11 +23,19 @@ const galleryimg = {
       { src: g1, title: "उद्घाटन समारंभ" },
       { src: g2, title: "लक्ष सायन्स फेस्टिवल" },
       { src: g3, title: "गोल्ड फेस्टिवल" },
-      { src: g1, title: "सोनेरी गट्टी" },
-      { src: g2, title: "mvm टीम ची कोलकात्य वारी" },
-      { src: g3, title: "मंगलमय महोत्सव" },
+      { src: g4, title: "सोनेरी गट्टी" },
+      { src: g5, title: "mvm टीम ची कोलकात्य वारी" },
+      { src: g6, title: "मंगलमय महोत्सव" },
       { src: g1, title: "खास दिवस वाढदिवस" },
       { src: g2, title: "mvm चे नयन भरे" },
+      { src: g1, title: "उद्घाटन समारंभ" },
+      { src: g2, title: "लक्ष सायन्स फेस्टिवल" },
+      { src: g3, title: "गोल्ड फेस्टिवल" },
+      { src: g4, title: "सोनेरी गट्टी" },
+      { src: g5, title: "mvm टीम ची कोलकात्य वारी" },
+      { src: g6, title: "मंगलमय महोत्सव" },
+      { src: g1, title: "खास दिवस वाढदिवस" },
+      { src: g7, title: "mvm चे नयन भरे" },
     ],
   };
 const Gallery = () => {
@@ -35,10 +48,10 @@ const Gallery = () => {
               
             <div className=''>
 
-                <div className='bg-cover justify-center items-center bg-no-repeat bg-center w-full min-h-screen '
-
-                    style={{ backgroundImage: `url(${img})` }}
-                >
+            <div
+  className="bg-cover bg-no-repeat bg-center w-full min-h-screen flex flex-col"
+  style={{ backgroundImage: `url(${img})`, minHeight: "100vh" }}
+>
                     <div className='container max-auto '>
     <nav className="bg-transparent py-8 px-10 mb-5">
         <div className=" mx-auto flex justify-between items-center">
@@ -52,7 +65,7 @@ const Gallery = () => {
           </Link>
         </div>
       </nav>
-                    <div className='min-h-screen flex justify-center items-center flex-col pt-4 pb-20 '>
+                    <div className='flex justify-center items-center flex-col pt-4 pb-20 '>
 
                             <div className='flex  gap-7 flex-col md:flex-row'>
                                 <div className='w-full max-w-[230px]'>
@@ -76,7 +89,7 @@ const Gallery = () => {
                             </div>
                         
 
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-20">
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-20">
   {galleryimg.images.map((gal, index) => (
     <div
       key={index}

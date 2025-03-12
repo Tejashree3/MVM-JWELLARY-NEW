@@ -23,21 +23,14 @@ const Home = () => {
         <Banner />
 
         <Navri />
-<Ribben/>
         <Purusharth />
-        <Ribben/>
 
         <Parampara/>
-        <Ribben/>
         <Shrungar/>
-        <Ribben/>
         <Sushobhit/>
-        <Ribben/>
 <Special/>
-<Ribben/>
 
 <Soundarya/>
-<Ribben/>
 <About/>
 <div className='w-full flex justify-center items-center bg-white p-10'>
 

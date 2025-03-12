@@ -6,25 +6,34 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import p1 from "../../assets/sushobhita/sushobhita.png";
 import p2 from "../../assets/purusharth/pu1.png";
+import s1 from "../../assets/sushobhita/su1.png";
+import s2 from "../../assets/sushobhita/su2.png";
+import s3 from "../../assets/sushobhita/su3.png";
+import s4 from "../../assets/sushobhita/su4.png";
+import s11 from "../../assets/sushobhita/su11.png";
+import s12 from "../../assets/sushobhita/su12.png";
+import s13 from "../../assets/sushobhita/su13.png";
+import s14 from "../../assets/sushobhita/su14.png";
+
+
 import img1 from "../../assets/sushobhita/sushobit.png";
 import img2 from "../../assets/navri/img2.png";
-import brooch from "../../assets/purusharth/brooch.png";
-import pin from "../../assets/purusharth/pin.png";
-import ring from "../../assets/purusharth/ring.png";
-import mala from "../../assets/purusharth/mala.png";
-import brecleate from "../../assets/purusharth/brecleate.png";
-import { ROUTES } from "../../constant";
 import { Link } from "react-router-dom";
+import { ROUTES } from "../../constant";
+import Ribben from "../Ribben";
+
 
 const products = [
-    { name: "ब्रोजेस", image: brooch },
-    { name: "माळा", image: brooch },
-    { name: "ब्रॅसलेट", image: brecleate },
-    { name: "अंगठी", image: ring },
+    { img1: s11, image: s1 },
+    { img1:s12, image: s2 },
+    { img1:s13 , image: s3 },
+    { img1:s14, image: s4 },
 ];
 
 const Sushobhit = () => {
     return (
+        <>
+        <Ribben/>
         <div className="">
                   <div
                       style={{ backgroundImage: `url(${p1})` }}
@@ -33,7 +42,7 @@ const Sushobhit = () => {
                       <div className="container">
                           <div className="flex justify-end items-center pt-10 md:pt-10 pb-20 flex-col w-full max-w-[750px]">
                               <div className="flex items-center gap-3 md:pb-15 pb-10 pr-0   md:pr-30 flex-col">
-                                  <img src={img1} alt="" />
+                                  <img src={img1} alt="" className="h-28"/>
                                   <img src={img2} alt="" />
                               </div>
       
@@ -58,8 +67,14 @@ const Sushobhit = () => {
                                           <SwiperSlide key={index} className="flex flex-col justify-center items-center">
    <Link to={ROUTES.PRODUCTS}>
                                         
-                                        <img src={p2} alt="Placeholder" className="mb-5   h-52" />
-                                      </Link>                                                      <img src={product.image} alt={product.name} />
+                                        <img src={product.image} alt="Placeholder" className="mb-5   h-52" />
+                                      </Link>  
+                                      <div className="flex justify-center items-center">
+                                        <img src={product.img1} alt="" />
+                                      </div>
+
+
+
                                           </SwiperSlide>
                                       ))}
                                   </Swiper>
@@ -70,13 +85,16 @@ const Sushobhit = () => {
                               <div className="w-full pb-20 flex justify-start items-start">
                                   <p className="text-white baloo text-[23px]">
       
-                                      आपल्या दागिन्यांमध्ये भारतीय परंपरेची मोहक छटा गुंफलेली आहे. MVM ज्वेलर्समध्ये प्रत्येक दागिना हा<br />
+                                      आपल्या दागिन्यांमध्ये भारतीय परंपरेची मोहक छटा गुंफलेली आहे. MVM ज्वेलर्समध्ये <br />प्रत्येक दागिना हा
                                       सांस्कृतिक वारशाचा संगम आणि कौशल्यपूर्ण कारागिरीचे प्रतीक आहे.
                                   </p>
                               </div>
                       </div>
                   </div>
               </div>
+
+<Ribben/>
+</>
     );
 };
 

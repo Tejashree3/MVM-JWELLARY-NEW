@@ -17,6 +17,14 @@ const products = [
   { id: 3, name: "Silver Bracelet", category: "Bracelet", image:card },
   { id: 4, name: "Ruby Ring", category: "Ring", image:card},
   { id: 5, name: "Pearl Necklace", category: "Necklace", image: card},
+  { id: 6, name: "Pearl Necklace", category: "Necklace", image: card},
+  { id: 7, name: "Pearl Necklace", category: "Necklace", image: card},
+  { id: 8, name: "Pearl Necklace", category: "Necklace", image: card},
+  { id: 9, name: "Pearl Necklace", category: "Necklace", image: card},
+  { id: 10, name: "Pearl Necklace", category: "Necklace", image: card},
+  { id: 11, name: "Pearl Necklace", category: "Necklace", image: card},
+
+
 ];
 
 const Products = () => {
@@ -83,7 +91,7 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="w-full h-[500px] p-4 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="w-full h-full  p-4 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
           <div key={product.id} className="card">
 <div className="relative group">

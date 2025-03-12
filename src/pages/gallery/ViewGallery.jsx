@@ -30,7 +30,7 @@ const ViewGallery = () => {
 
   return (
     <div>
-      <div className="bg-cover flex justify-center items-center bg-no-repeat bg-center w-full min-h-screen" style={{ backgroundImage: `url(${img})` }}>
+      <div className="bg-cover flex justify-center items-center bg-no-repeat bg-center w-full " style={{ backgroundImage: `url(${img})` }}>
         <div className="container max-auto">
           <nav className="bg-transparent py-8 px-10 mb-5">
             <div className="mx-auto flex justify-between items-center">
@@ -40,7 +40,7 @@ const ViewGallery = () => {
             </div>
           </nav>
 
-          <div className="min-h-screen flex justify-center items-center flex-col pt-4 pb-20">
+          <div className=" flex justify-center items-center flex-col pt-8 pb-48">
             <div className="flex gap-7 flex-col">
               <div>
                 <img src={title} alt="" className="mb-1" />
@@ -67,7 +67,7 @@ const ViewGallery = () => {
                 />
               </div>
 
-              <div className="md:col-span-2 grid sm:grid-cols-2 px-3 grid-cols-1 gap-4">
+              <div className="md:col-span-2 grid sm:grid-cols-2 md:px-3 px-0 grid-cols-1 gap-4">
                 {galleryimg.slice(1, 5).map((gal, i) => (
                   <div key={i} className="overflow-hidden shadow-lg">
                     <img

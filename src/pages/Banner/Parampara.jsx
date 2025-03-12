@@ -4,37 +4,46 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import p1 from "../../assets/parampara/parampara.png";
-import p2 from "../../assets/purusharth/pu1.png";
-import img1 from "../../assets/parampara/para.png";
-import img2 from "../../assets/navri/img2.png";
-import brooch from "../../assets/purusharth/brooch.png";
-import pin from "../../assets/purusharth/pin.png";
-import ring from "../../assets/purusharth/ring.png";
-import mala from "../../assets/purusharth/mala.png";
-import brecleate from "../../assets/purusharth/brecleate.png";
+import p11 from "../../assets/parampara/parampara.png";
+import p1 from "../../assets/parampara/p1.png";
+import p2 from "../../assets/parampara/p2.png";
+import p3 from "../../assets/parampara/p3.png";
+import p4 from "../../assets/parampara/p4.png";
+import p5 from "../../assets/parampara/p5.png";
+import pp1 from "../../assets/parampara/pp1.png";
+import pp2 from "../../assets/parampara/pp2.png";
+import pp3 from "../../assets/parampara/pp3.png";
+import pp4 from "../../assets/parampara/pp4.png";
+import pp5 from "../../assets/parampara/pp5.png";
+import img1 from "../../assets/parampara/para.png"
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../constant";
+import img2 from "../../assets/navri/img2.png";
+import Ribben from "../Ribben";
 
 const products = [
-  { name: "ब्रोजेस", image: brooch },
-  { name: "माळा", image: brooch },
-  { name: "ब्रॅसलेट", image: brecleate },
-  { name: "अंगठी", image: ring },
-  { name: "टाय पिन्स", image: pin },
+  { img1: pp1, image: p1 },
+  { img1: pp2, image: p2 },
+  { img1: pp3, image: p3 },
+  { img1: pp4, image: p4 },
+  { img1: pp5, image:p5  },
 ];
 
 const Parampara = () => {
   return (
+    <>
+    
+    <Ribben/>
+
     <div className="">
               <div
-                  style={{ backgroundImage: `url(${p1})` }}
+                  style={{ backgroundImage: `url(${p11})` }}
                   className="bg-cover bg-no-repeat bg-center w-full flex justify-center items-center custom-height-1"
               >
                   <div className="container">
                       <div className="flex justify-end items-center pt-10 md:pt-10 pb-20 flex-col w-full max-w-[850px]">
                           <div className="flex items-center gap-3 md:pb-15 pb-10 pr-0   md:pr-30 flex-col">
-                              <img src={img1} alt="" />
+                              <img src={img1} alt="" className="h-24"/>
                               <img src={img2} alt="" />
                           </div>
   
@@ -59,9 +68,12 @@ const Parampara = () => {
                                       <SwiperSlide key={index} className="flex flex-col justify-center items-center">
                                         <Link to={ROUTES.PRODUCTS}>
                                         
-                                          <img src={p2} alt="Placeholder" className="mb-5   h-52" />
+                                          <img src={product.image} alt="Placeholder" className="mb-5   h-52" />
                                         </Link>
-                                          <img src={product.image} alt={product.name} />
+                                        <div className="flex justify-center items-center">
+
+                                          <img src={product.img1} className="" alt=""/>
+                                        </div>
                                       </SwiperSlide>
                                   ))}
                               </Swiper>
@@ -72,14 +84,17 @@ const Parampara = () => {
                           <div className="w-full pb-20 flex justify-start items-start">
                               <p className="text-white baloo text-[23px]">
   
-                                  आपल्या दागिन्यांमध्ये भारतीय परंपरेची मोहक छटा गुंफलेली आहे. MVM ज्वेलर्समध्ये प्रत्येक दागिना हा<br />
+                                  आपल्या दागिन्यांमध्ये भारतीय परंपरेची मोहक छटा गुंफलेली आहे. MVM ज्वेलर्समध्ये प्रत्येक दागिना<br /> हा
                                   सांस्कृतिक वारशाचा संगम आणि कौशल्यपूर्ण कारागिरीचे प्रतीक आहे.
                               </p>
                           </div>
                   </div>
               </div>
           </div>
-  );
+
+    <Ribben/>
+    </>
+    );
 };
 
 export default Parampara;
