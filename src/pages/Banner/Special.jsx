@@ -34,7 +34,7 @@ const Special = () => {
 
     <>
     <div className="w-full">
-      <div className="flex justify-center items-center flex-col gap-3 py-28">
+      <div className="flex justify-center items-center flex-col gap-3 pt-10 pb-20">
         <img src={img4} alt="" />
         <img src={img5} alt="" />
         <img src={img3} alt="" />
@@ -42,7 +42,7 @@ const Special = () => {
 
       <div
         style={{ backgroundImage: `url(${img1})` }}
-        className="bg-cover bg-center bg-[#660033] bg-no-repeat w-full h-[600px] md:min-h-[800px] relative flex flex-col items-center"
+        className="bg-cover bg-center bg-[#660033] bg-no-repeat w-full h-[500px] md:min-h-[500px] relative flex flex-col items-center"
       >
         <img
           src={img2}
@@ -66,19 +66,23 @@ const Special = () => {
             pagination={ false }
             className="w-full text-center"
           >
-           {products.map((product, index) => (
-                                      <SwiperSlide key={index} className="flex flex-col justify-center gap-4 items-center">
-   <Link to={ROUTES.PRODUCTS}>
-                                        
-                                        <img src={product.img1} alt="Placeholder" className="mb-5  p-2 " />
-                                      </Link>   
-                                      <div className="flex justify-center items-center">
-
-                                      <img src={product.image} alt="" />
-                                      </div>
-
-                                      </SwiperSlide>
-                                  ))}
+               {products.map((product, index) => (
+                                               <SwiperSlide key={index} className="flex flex-col items-center justify-center">
+                                               <Link to={ROUTES.COLLECTIONS} className="flex justify-center">
+                                                 <img 
+                                                   src={product.img1} 
+                                                   alt="Placeholder" 
+                                                   className="mb-5 h-80 object-contain mx-auto" 
+                                                 />
+                                               </Link>   
+                                               <img 
+                                                 src={product.image} 
+                                                 alt="" 
+                                                 className="h-8 object-contain mx-auto" 
+                                               />
+                                             </SwiperSlide>
+          
+                                            ))}
           </Swiper>
         </div>
       </div>

@@ -14,41 +14,42 @@ const Soundarya = () => {
   return (
 
     <>
-<div className="">
-    <div className="pb-10 pt-16 flex justify-center items-center flex-col">
-<img src={s} alt="" className="pb-4" />
+<div className="container">
+    <div className="pb-10 pt-10 flex justify-center items-center flex-col">
+<img src={s} alt="" className="pb-3" />
 <img src={strip1} alt="" />
     </div>
-    <div className="grid md:grid-cols-3 ">
+    <div className="grid gap-3 md:grid-cols-3 pb-10">
       <div className="relative gallery-img-1
        text-center overflow-hidden">
-        <img src={s1} alt="Modern Design" className="w-full custom-height  object-cover" />
+        <img src={s1} alt="Modern Design" className="w-full h-auto object-cover" />
         <div className="absolute bottom-0 w-full bg-gradient-to-t gap-3 from-black/70 to-transparent 
         flex justify-center items-center flex-col text-white px-12 py-8">
-<img src={design} alt=""  />
+<img src={design} alt="" className="h-16" />
  <img src={strip} alt="" />
-          <p className="text-xl">स्टाईलची नवी परिभाषा, आधुनिकतेच्या स्पर्शाने</p>
+          <p className="text-md">स्टाईलची नवी परिभाषा, आधुनिकतेच्या स्पर्शाने</p>
         </div>
       </div>
 
       <div className="relative gallery-img-1
        text-center overflow-hidden">
-        <img src={s2} alt="Silver Set" className="w-full custom-height object-cover" />
+        <img src={s2} alt="Silver Set" className="w-full h-autoobject-cover" />
         <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent gap-3 flex justify-center items-center flex-col text-white px-12 py-8">
-<img src={silver} alt="" />
+<img src={silver} alt=""  className="h-16" />
       <img src={strip} alt="" />
 
-          <p className="text-xl">चांदीची झळाळी, तुमच्या घराचं वैभव</p>
+          <p className="text-md">चांदीची झळाळी, तुमच्या घराचं वैभव</p>
         </div>
       </div>
 
       <div className="relative gallery-img-1
        text-center overflow-hidden">
-        <img src={s3} alt="Necklace Set" className="w-full custom-height object-cover " />
+        <img src={s3} alt="Necklace Set" className="w-full h-autoobject-cover " />
         <div className="absolute bottom-0 w-full bg-gradient-to-tnb gap-3 from-black/70 to-transparent flex justify-center items-center flex-col text-white px-12 py-8">
-<img src={set} alt="" />          <img src={strip} alt="" />
+<img src={set} alt=""  className="h-16" /> 
+         <img src={strip} alt="" />
 
-          <p className="text-xl">तुमच्या सौंदर्याला गाणारा प्रत्येक मनमोहक दागिना</p>
+          <p className="text-md">तुमच्या सौंदर्याला गाणारा प्रत्येक मनमोहक दागिना</p>
         </div>
       </div>
     </div>

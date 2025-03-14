@@ -64,18 +64,23 @@ const Parampara = () => {
                                     1024: { slidesPerView: 5 }, 
                                   }}
                               >
-                                  {products.map((product, index) => (
-                                      <SwiperSlide key={index} className="flex flex-col justify-center items-center">
-                                        <Link to={ROUTES.PRODUCTS}>
-                                        
-                                          <img src={product.image} alt="Placeholder" className="mb-5   h-52" />
-                                        </Link>
-                                        <div className="flex justify-center items-center">
-
-                                          <img src={product.img1} className="" alt=""/>
-                                        </div>
-                                      </SwiperSlide>
-                                  ))}
+                                     {products.map((product, index) => (
+                                                                     <SwiperSlide key={index} className="flex flex-col items-center justify-center">
+                                                                     <Link to={ROUTES.COLLECTIONS} className="flex justify-center">
+                                                                       <img 
+                                                                         src={product.image} 
+                                                                         alt="Placeholder" 
+                                                                         className="mb-5 h-52 object-contain mx-auto" 
+                                                                       />
+                                                                     </Link>   
+                                                                     <img 
+                                                                       src={product.img1} 
+                                                                       alt="" 
+                                                                       className="h-8 object-contain mx-auto" 
+                                                                     />
+                                                                   </SwiperSlide>
+                                
+                                                                  ))}
                               </Swiper>
   
   </div>

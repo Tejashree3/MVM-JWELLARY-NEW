@@ -44,10 +44,8 @@ const Purusharth = () => {
                               <img src={img1} alt="" className="h-28"/>
                               <img src={img2} alt="" />
                           </div>
-  
-                          
+
                           <div className="w-full max-w-[1200px]">
-  
                               <Swiper
                                   spaceBetween={1}
                                   navigation={false}
@@ -55,39 +53,38 @@ const Purusharth = () => {
                                   modules={[Navigation]}
                                   className="mySwiper"
                                   breakpoints={{
-                                    
-                                    320: { slidesPerView: 1 }, 
-                                    480: { slidesPerView: 2 }, 
-                                    640: { slidesPerView: 3 }, 
-                                    768: { slidesPerView: 4 }, 
-                                    1024: { slidesPerView: 5 }, 
+
+                                    320: { slidesPerView: 1 },
+                                    480: { slidesPerView: 2 },
+                                    640: { slidesPerView: 3 },
+                                    768: { slidesPerView: 4 },
+                                    1024: { slidesPerView: 5 }
                                   }}
                               >
                                   {products.map((product, index) => (
                                      <SwiperSlide key={index} className="flex flex-col items-center justify-center">
-                                     <Link to={ROUTES.PRODUCTS} className="flex justify-center">
-                                       <img 
-                                         src={product.image} 
-                                         alt="Placeholder" 
-                                         className="mb-5 h-52 object-contain mx-auto" 
+                                     <Link to={ROUTES.COLLECTIONS} className="flex  justify-center">
+                                       <img
+                                         src={product.image}
+                                         alt="Placeholder"
+                                         className="mb-5 h-52  object-contain mx-auto"
                                        />
-                                     </Link>   
-                                     <img 
-                                       src={product.img1} 
-                                       alt="" 
-                                       className="h-10 object-contain mx-auto" 
+                                     </Link>
+                                     <img
+                                       src={product.img1}
+                                       alt=""
+                                       className="h-8 object-contain mx-auto"
                                      />
                                    </SwiperSlide>
-                                   
+
                                   ))}
                               </Swiper>
-  
+
   </div>
                       </div>
-  
                           <div className="w-full pb-20 flex justify-start items-start">
                               <p className="text-white baloo text-[23px]">
-  
+
                                   आपल्या दागिन्यांमध्ये भारतीय परंपरेची मोहक छटा गुंफलेली आहे. MVM ज्वेलर्समध्ये प्रत्येक<br /> दागिना हा
                                   सांस्कृतिक वारशाचा संगम आणि कौशल्यपूर्ण कारागिरीचे प्रतीक आहे.
                               </p>

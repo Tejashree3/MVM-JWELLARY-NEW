@@ -53,14 +53,14 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-<div className="flex justify-between items-center sm:flex-row flex-col ">
+<div className="flex justify-between items-center md:flex-row flex-col ">
     <div className="">
 
           <h3 className="font-bold text-lg pb-2">Subscribe</h3>
     </div>
 
 
-        <div className="flex flex-col items-center py-6 w-full max-w-80 ">
+        <div className="flex flex-col items-center py-6 w-full max-w-96 ">
           <div className="relative flex items-center border border-white/30 rounded-full shadow overflow-hidden w-full ">
             <input
               type="email"

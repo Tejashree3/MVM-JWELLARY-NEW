@@ -13,6 +13,7 @@ import ViewProductPage from "./pages/Product/ViewProductPage";
 import Gallery from "./pages/gallery/Gallery";
 import ViewGallery from "./pages/gallery/ViewGallery";
 import Collection from "./pages/collection/Collection";
+import { ProductProvider } from "./pages/context/ProductContext";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -82,10 +83,12 @@ function AppContent() {
 
 function App() {
   return (
+    <ProductProvider>
     <Router>
       <ScrollToTop />
       <AppContent />
     </Router>
+  </ProductProvider>
   );
 }
 
