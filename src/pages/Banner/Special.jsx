@@ -34,57 +34,53 @@ const Special = () => {
 
     <>
     <div className="w-full">
-      <div className="flex justify-center items-center flex-col gap-3 pt-10 pb-20">
-        <img src={img4} alt="" />
-        <img src={img5} alt="" />
-        <img src={img3} alt="" />
+      <div className="flex justify-center items-center flex-col gap-2 pt-8 pb-16">
+        <img src={img4} alt="" className="h-6"/>
+        <img src={img5} alt="" className="h-16"/>
+        <img src={img3} alt="" className="w-96"/>
       </div>
 
       <div
         style={{ backgroundImage: `url(${img1})` }}
-        className="bg-cover bg-center bg-[#660033] bg-no-repeat w-full h-[500px] md:min-h-[500px] relative flex flex-col items-center"
+        className="bg-cover bg-center bg-[#660033] bg-no-repeat w-full h-[450px] md:min-h-[450px] relative flex flex-col items-center"
       >
         <img
           src={img2}
           alt="Maharashtra Theme"
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full md:w-4/5"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full min-h-10 md:w-4/5"
         />
-
-        <div className="container relative z-0 w-full -my-10">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={0}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
-              1024: { slidesPerView: 4 },
-            }}
-            loop={true}
-            autoplay={{ delay: 2500 }}
-            navigation={false}
-            pagination={ false }
-            className="w-full text-center"
-          >
-               {products.map((product, index) => (
-                                               <SwiperSlide key={index} className="flex flex-col items-center justify-center">
-                                               <Link to={ROUTES.COLLECTIONS} className="flex justify-center">
-                                                 <img 
-                                                   src={product.img1} 
-                                                   alt="Placeholder" 
-                                                   className="mb-5 h-80 object-contain mx-auto" 
-                                                 />
-                                               </Link>   
-                                               <img 
-                                                 src={product.image} 
-                                                 alt="" 
-                                                 className="h-8 object-contain mx-auto" 
-                                               />
-                                             </SwiperSlide>
-          
-                                            ))}
-          </Swiper>
-        </div>
+  <div className="relative w-full flex justify-center">
+      <div className="max-w-[1000px] w-full relative z-10 -my-10">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={10} 
+          slidesPerView={1} 
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 }, // Ensures 4 slides in the 800px width
+          }}
+          loop={true}
+          autoplay={{ delay: 2500 }}
+          navigation={false}
+          pagination={false}
+          className="w-full text-center"
+        >
+          {products.map((product, index) => (
+            <SwiperSlide key={index} className="flex flex-col items-center justify-center">
+              <Link to={ROUTES.COLLECTIONS} className="flex justify-center">
+                <img
+                  src={product.img1}
+                  alt="Product"
+                  className="mb-5 h-72 object-contain mx-auto"
+                />
+              </Link>
+              <img src={product.image} alt="" className="h-8 object-contain mx-auto" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      </div>
       </div>
     </div>
 

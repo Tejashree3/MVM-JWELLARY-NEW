@@ -47,7 +47,7 @@ const About = () => {
         </div>
     </div>
 
-    <div className='w-full flex justify-center items-center bg-white p-10'>
+    <div className='w-full flex justify-center items-center bg-white pt-10'>
 <img src={img3} alt="" />
     </div>
    

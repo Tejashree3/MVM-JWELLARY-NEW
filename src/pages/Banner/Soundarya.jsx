@@ -15,14 +15,14 @@ const Soundarya = () => {
 
     <>
 <div className="container">
-    <div className="pb-10 pt-10 flex justify-center items-center flex-col">
-<img src={s} alt="" className="pb-3" />
-<img src={strip1} alt="" />
+    <div className="pb-5 pt-10 flex justify-center items-center flex-col">
+<img src={s} alt="" className="pb-3 h-20" />
+<img src={strip1} alt="" className=" h-10" />
     </div>
     <div className="grid gap-3 md:grid-cols-3 pb-10">
-      <div className="relative gallery-img-1
+      <div className="relative gallery-img-1 h-[500px]
        text-center overflow-hidden">
-        <img src={s1} alt="Modern Design" className="w-full h-auto object-cover" />
+        <img src={s1} alt="Modern Design" className="w-full  h-[500px] object-cover" />
         <div className="absolute bottom-0 w-full bg-gradient-to-t gap-3 from-black/70 to-transparent 
         flex justify-center items-center flex-col text-white px-12 py-8">
 <img src={design} alt="" className="h-16" />
@@ -31,9 +31,9 @@ const Soundarya = () => {
         </div>
       </div>
 
-      <div className="relative gallery-img-1
+      <div className="relative gallery-img-1  h-[500px]
        text-center overflow-hidden">
-        <img src={s2} alt="Silver Set" className="w-full h-autoobject-cover" />
+        <img src={s2} alt="Silver Set" className="w-full  h-[500px] object-cover" />
         <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent gap-3 flex justify-center items-center flex-col text-white px-12 py-8">
 <img src={silver} alt=""  className="h-16" />
       <img src={strip} alt="" />
@@ -42,9 +42,9 @@ const Soundarya = () => {
         </div>
       </div>
 
-      <div className="relative gallery-img-1
+      <div className="relative gallery-img-1  h-[500px]
        text-center overflow-hidden">
-        <img src={s3} alt="Necklace Set" className="w-full h-autoobject-cover " />
+        <img src={s3} alt="Necklace Set" className="w-full  h-[500px] object-cover " />
         <div className="absolute bottom-0 w-full bg-gradient-to-tnb gap-3 from-black/70 to-transparent flex justify-center items-center flex-col text-white px-12 py-8">
 <img src={set} alt=""  className="h-16" /> 
          <img src={strip} alt="" />

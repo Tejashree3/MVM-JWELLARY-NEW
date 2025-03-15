@@ -36,11 +36,12 @@ const Purusharth = () => {
     <div className="">
               <div
                   style={{ backgroundImage: `url(${p1})` }}
-                  className="bg-cover bg-no-repeat bg-center  flex justify-center items-center w-full custom-height-1"
+                  className="bg-cover bg-no-repeat bg-center  flex 
+                   w-full custom-height-1"
               >
-                  <div className="container">
-                      <div className="flex justify-end items-center pt-10 md:pt-10 pb-20 flex-col w-full max-w-[850px]">
-                          <div className="flex items-center gap-3 md:pb-15 pb-10 pr-0   md:pr-30 flex-col">
+                  <div className="container pt-10">
+                      <div className="flex justify-end items-center  pb-10 flex-col w-full max-w-[850px]">
+                          <div className="flex items-center gap-3 md:pb-10 pb-10 pr-0   md:pr-30 flex-col">
                               <img src={img1} alt="" className="h-28"/>
                               <img src={img2} alt="" />
                           </div>
@@ -67,7 +68,7 @@ const Purusharth = () => {
                                        <img
                                          src={product.image}
                                          alt="Placeholder"
-                                         className="mb-5 h-52  object-contain mx-auto"
+                                         className="mb-5 h-48  object-contain mx-auto"
                                        />
                                      </Link>
                                      <img
@@ -82,7 +83,7 @@ const Purusharth = () => {
 
   </div>
                       </div>
-                          <div className="w-full pb-20 flex justify-start items-start">
+                          <div className="w-full  flex justify-start items-start">
                               <p className="text-white baloo text-[23px]">
 
                                   आपल्या दागिन्यांमध्ये भारतीय परंपरेची मोहक छटा गुंफलेली आहे. MVM ज्वेलर्समध्ये प्रत्येक<br /> दागिना हा

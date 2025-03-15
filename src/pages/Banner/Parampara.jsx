@@ -38,58 +38,57 @@ const Parampara = () => {
     <div className="">
               <div
                   style={{ backgroundImage: `url(${p11})` }}
-                  className="bg-cover bg-no-repeat bg-center w-full flex justify-center items-center custom-height-1"
+                  className="bg-cover bg-no-repeat bg-center w-full flex  custom-height-1"
               >
-                  <div className="container">
-                      <div className="flex justify-end items-center pt-10 md:pt-10 pb-20 flex-col w-full max-w-[850px]">
-                          <div className="flex items-center gap-3 md:pb-15 pb-10 pr-0   md:pr-30 flex-col">
-                              <img src={img1} alt="" className="h-24"/>
+                   
+                  <div className="container pt-10">
+                      <div className="flex justify-end items-center  pb-10 flex-col w-full max-w-[850px]">
+                          <div className="flex items-center gap-3 md:pb-10 pb-10 pr-0   md:pr-30 flex-col">
+                              <img src={img1} alt="" className="h-28"/>
                               <img src={img2} alt="" />
                           </div>
-  
-                          
+
                           <div className="w-full max-w-[1200px]">
-  
                               <Swiper
-                                  spaceBetween={0}
+                                  spaceBetween={1}
                                   navigation={false}
                                   pagination={{ clickable: true }}
                                   modules={[Navigation]}
                                   className="mySwiper"
                                   breakpoints={{
-                                    320: { slidesPerView: 1 }, 
-                                    480: { slidesPerView: 2 }, 
-                                    640: { slidesPerView: 3 }, 
-                                    768: { slidesPerView: 4 }, 
-                                    1024: { slidesPerView: 5 }, 
+
+                                    320: { slidesPerView: 1 },
+                                    480: { slidesPerView: 2 },
+                                    640: { slidesPerView: 3 },
+                                    768: { slidesPerView: 4 },
+                                    1024: { slidesPerView: 5 }
                                   }}
                               >
-                                     {products.map((product, index) => (
-                                                                     <SwiperSlide key={index} className="flex flex-col items-center justify-center">
-                                                                     <Link to={ROUTES.COLLECTIONS} className="flex justify-center">
-                                                                       <img 
-                                                                         src={product.image} 
-                                                                         alt="Placeholder" 
-                                                                         className="mb-5 h-52 object-contain mx-auto" 
-                                                                       />
-                                                                     </Link>   
-                                                                     <img 
-                                                                       src={product.img1} 
-                                                                       alt="" 
-                                                                       className="h-8 object-contain mx-auto" 
-                                                                     />
-                                                                   </SwiperSlide>
-                                
-                                                                  ))}
+                                  {products.map((product, index) => (
+                                     <SwiperSlide key={index} className="flex flex-col items-center justify-center">
+                                     <Link to={ROUTES.COLLECTIONS} className="flex  justify-center">
+                                       <img
+                                         src={product.image}
+                                         alt="Placeholder"
+                                         className="mb-5 h-48  object-contain mx-auto"
+                                       />
+                                     </Link>
+                                     <img
+                                       src={product.img1}
+                                       alt=""
+                                       className="h-8 object-contain mx-auto"
+                                     />
+                                   </SwiperSlide>
+
+                                  ))}
                               </Swiper>
-  
+
   </div>
                       </div>
-  
-                          <div className="w-full pb-20 flex justify-start items-start">
+                          <div className="w-full  flex justify-start items-start">
                               <p className="text-white baloo text-[23px]">
-  
-                                  आपल्या दागिन्यांमध्ये भारतीय परंपरेची मोहक छटा गुंफलेली आहे. MVM ज्वेलर्समध्ये प्रत्येक दागिना<br /> हा
+
+                                  आपल्या दागिन्यांमध्ये भारतीय परंपरेची मोहक छटा गुंफलेली आहे. MVM ज्वेलर्समध्ये प्रत्येक<br /> दागिना हा
                                   सांस्कृतिक वारशाचा संगम आणि कौशल्यपूर्ण कारागिरीचे प्रतीक आहे.
                               </p>
                           </div>
