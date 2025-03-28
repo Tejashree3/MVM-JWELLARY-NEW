@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import p1 from "../../assets/shrungar/shrungar.png";
 import s1 from "../../assets/shrungar/sh1.png";
 import s2 from "../../assets/shrungar/sh2.png";
@@ -20,7 +20,7 @@ import img2 from "../../assets/navri/img2.png";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../constant";
 import Ribben from "../Ribben";
-
+import mobile from "../../assets/mobile/shrungar.png"
 const products = [
     { img1:s11 , image: s1 },
     { img1:s12, image: s2 },
@@ -29,12 +29,104 @@ const products = [
 ];
 
 const Shrungar = () => {
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 550);
+
+    // Handle window resize to update view
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobileView(window.innerWidth <= 550);
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
+        <>
+   {isMobileView ? (
         <>
         
         
-    
         <div className="">
+  <div className="relative w-full">
+    {/* Background Section with Overlay */}
+    <div
+      style={{ backgroundImage: `url(${mobile})` }}
+      className="bg-cover bg-no-repeat flex w-full relative"
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#482318] opacity-80"></div>
+
+      {/* Content Section */}
+      <div className="container pt-10 relative z-10">
+        <div className="flex justify-end items-center pb-10 flex-col w-full max-w-[850px]">
+          <div className="flex items-center gap-3 md:pb-10 pb-10 pr-0 md:pr-30 flex-col">
+            <img src={img1} alt="" className="w-56 h-20" />
+            <img src={img2} alt="" className="w-48" />
+          </div>
+
+          <div className="w-full max-w-[1200px]">
+            <Swiper
+               spaceBetween={1}
+           
+           
+               modules={[Navigation, Pagination, Autoplay]}
+               className="mySwiper"
+               breakpoints={{
+                 320: { slidesPerView: 1 },
+                 480: { slidesPerView: 2 },
+                 640: { slidesPerView: 3 },
+                 768: { slidesPerView: 4 },
+                 1024: { slidesPerView: 5 },
+               }}
+               loop={true}
+               autoplay={{ delay: 2500 }}
+               navigation={false}
+               pagination={false}
+            >
+              {products.map((product, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="flex flex-col items-center justify-center"
+                >
+                  <Link
+                    to={ROUTES.COLLECTIONS}
+                    className="flex justify-center"
+                  >
+                    <img
+                      src={product.image}
+                      alt="Placeholder"
+                      className="mb-5 w-56 h-60 object-contain mx-auto" 
+                      />
+                  </Link>
+                  <img
+                    src={product.img1}
+                    alt=""
+                    className="h-8 object-contain mx-auto"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Ribben Component */}
+  <Ribben />
+
+  <div className="w-full flex justify-start items-start">
+    <p className="text-[#482318] baloo text-[13px] px-4 py-6">
+    तुमच्या सौंदर्याला खुलवणारे खास दागिने, परंपरेची झळाळी आणि आधुनिकतेची नजाकत एकत्र. 
+    <span className="font-bold">MVM</span> ज्वेलर्समध्ये प्रत्येक दागिना खास तुमच्यासाठी.
+    </p>
+  </div>
+</div>
+
+        </>
+   ):(
+<>
+    <div className="">
             <div
                 style={{ backgroundImage: `url(${p1})` }}
                 className="bg-cover bg-no-repeat bg-bottom flex  w-full custom-height-1"
@@ -95,8 +187,10 @@ const Shrungar = () => {
                 </div>
             </div>
         </div>
-
-        </>
+        <Ribben/>
+       </>
+    )}
+  </>
     );
 };
 

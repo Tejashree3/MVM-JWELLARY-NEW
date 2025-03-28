@@ -44,6 +44,18 @@ const ViewProductPage = () => {
     const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
     const { selectedProduct, setSelectedProduct, collectionTitle, collectionBanner } = useContext(ProductContext);
     const location = useLocation();
+      // State to track window width
+      const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 550);
+    
+      // Handle window resize to update view
+      useEffect(() => {
+        const handleResize = () => {
+          setIsMobileView(window.innerWidth <= 550);
+        };
+    
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
     
     useEffect(() => {
         if (location.state?.product) {
@@ -62,6 +74,143 @@ const ViewProductPage = () => {
     };
 
     return (
+
+<>
+{isMobileView ? (
+        <>
+        <div>
+            <div
+                style={{ backgroundImage: `url(${collectionBanner})` }}
+                className="bg-cover flex justify-center shadow-2xl items-center bg-no-repeat bg-center b-height w-full"
+            >
+                <div className='container '>
+                    <div className='mb-6'>
+                        <Link to={ROUTES.HOME}>
+
+                            <img src={img2} alt="" className='h-32' />
+                        </Link>
+                    </div>
+                    <div className=' grid md:grid-cols-2 items-end'>
+                        <div className=''>
+                            <Link to={ROUTES.PRODUCTS}>
+
+                                <img src={collectionTitle} alt="" />
+                            </Link>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+                <div className="container mx-auto py-24 flex flex-col md:flex-row   gap-12">
+                    <div className=" w-full md:w-1/2 px-4">
+                        <div className="relative flex flex-col justify-start gap-5">
+                        <img
+    src={selectedProduct?.img ? selectedProduct.img : ""}
+    alt="Product"
+    className=" w-full relative  max-w-[500px] object-cover rounded-lg"
+/>
+
+                            <div className='absolute w-full p-2 bottom-2 flex flex-row-reverse justify-between'>
+                                <div className='flex gap-2'>
+                                    <button className='px-3 py-3 bg-gray-200 rounded-md'>
+                                        <CiSaveUp2 size={20} />
+                                    </button>
+                                    <button className='px-3 py-3 bg-gray-200 rounded-md'>
+
+                                        <CiHeart size={20} />
+                                    </button>
+                                </div>
+                                <div className='flex gap-2 '>
+
+                                    <button onClick={prevImage} className="px-3 py-1 text-2xl bg-gray-200 rounded-md">&#8249;</button>
+                                    <button onClick={nextImage} className=" px-3 py-1 text-2xl bg-gray-200 rounded-md">&#8250;</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="flex mt-4 gap-2 ">
+                            {product.images.map((img, index) => (
+                                <img
+                                    key={index}
+                                    src={selectedProduct?.img ? selectedProduct.img : ""}
+                                    alt="Thumbnail"
+                                    className={`w-14 h-20 object-cover cursor-pointer rounded-lg ${currentImage === index ? "border-2 border-black" : ""
+                                        }`}
+                                    onClick={() => setCurrentImage(index)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className=" w-full md:w-1/2 flex flex-col gap-2 md:pr-0 pr-0   ">
+                        <h2 className="text-lg font-medium pb-5 text-[#8F8F8F]">{product.title}</h2>
+                        <h2 className="text-4xl font-semibold">{selectedProduct?.name}</h2>
+                        <div className='flex items-center py-5 border-b border-dashed justify-between'>
+                            <div className='flex items-center gap-5'>
+
+                                <p className="text-lg font-medium text-[#8F8F8F] line-through">Rs.{product.originalPrice}</p>
+                                <p className="text-black text-2xl font-bold">Rs.{selectedProduct?.price}</p>
+                            </div>
+                            <div className=''>
+
+                                <p className="text-lg font-medium text-[#8F8F8F]">{product.sold} Sold • ⭐ {product.rating}</p>
+                            </div>
+                        </div>
+
+                       <div className='py-3 flex gap-3 flex-col'>
+
+                            <h5 className='text-lg font-bold'>
+                                Description</h5>
+                            <p className="text-lg font-medium text-[#8F8F8F]">{selectedProduct?.desc}</p>
+                        </div>
+                        <div className=' flex flex-col gap-3 pt-2'>
+                            <h5 className='text-lg font-bold'>
+                                Key feature</h5>
+                            <p className="text-lg font-medium text-[#8F8F8F]">{product.features1}</p>
+                            <p className="text-lg font-medium text-[#8F8F8F]">{product.features2}</p>
+
+                        </div>
+
+                        <div className='py-6'>
+                            <div className='flex justify-between '>
+
+                                <p className="text-lg  font-medium text-[#646464]">Size: <span className='text-lg  font-semibold text-black'>{selectedSize}</span></p>
+                                <Link >
+                                    <p className='text-lg underline font-medium text-[#646464]'>
+                                        View size cart
+                                    </p>
+                                </Link>
+                            </div>
+                            <div className="flex gap-2 flex-wrap mt-3">
+                                {product.sizes.map((size) => (
+                                    <button
+                                        key={size}
+                                        className={`px-6 py-1 border rounded-lg ${selectedSize === size ? "bg-gray-300 text-black font-semibold" : ""}`}
+                                        onClick={() => setSelectedSize(size)}
+                                    >
+                                        {size}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="flex justify-between flex-col md:flex-row gap-2 mt-4">
+                            <button className="px-14 py-2.5 bg-[#6B2929] text-white rounded-lg flex items-center justify-center gap-2">
+                                <FaHeart /> Add To Favorite
+                            </button>
+                            <button className="px-6 py-2.5 bg-white border text-black rounded-lg">Checkout Now</button>
+                        </div>
+
+                        <p className='text-sm pt-7 font-medium text-[#646464]'>
+                            Delivery T&C
+                        </p>
+                    </div>
+                </div>
+        </div>
+        </>
+):(
+    <>
         <div>
             <div
                 style={{ backgroundImage: `url(${collectionBanner})` }}
@@ -194,6 +343,11 @@ const ViewProductPage = () => {
                     </div>
                 </div>
         </div>
+        </> 
+)}
+</>
+
+
     )
 }
 

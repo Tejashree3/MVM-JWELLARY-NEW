@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -29,20 +29,35 @@ const products = [
 ];
 
 const Special = () => {
+  
+ const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 550);
+
+ // Handle window resize to update view
+ useEffect(() => {
+   const handleResize = () => {
+     setIsMobileView(window.innerWidth <= 550);
+   };
+
+   window.addEventListener("resize", handleResize);
+   return () => window.removeEventListener("resize", handleResize);
+ }, []);
   return (
 
 
     <>
+   {isMobileView ? (
+        <>
+        <Ribben/>
     <div className="w-full">
       <div className="flex justify-center items-center flex-col gap-2 pt-8 pb-16">
-        <img src={img4} alt="" className="h-6"/>
-        <img src={img5} alt="" className="h-16"/>
-        <img src={img3} alt="" className="w-96"/>
+        <img src={img4} alt="" className=" w-52"/>
+        <img src={img5} alt="" className="w-64"/>
+        <img src={img3} alt="" className="w-64"/>
       </div>
 
       <div
         style={{ backgroundImage: `url(${img1})` }}
-        className="bg-cover bg-center bg-[#660033] bg-no-repeat w-full h-[450px] md:min-h-[450px] relative flex flex-col items-center"
+        className="bg-cover bg-center bg-[#660033] bg-no-repeat w-full h-[300px] md:min-h-[450px] relative flex flex-col items-center"
       >
         <img
           src={img2}
@@ -72,7 +87,7 @@ const Special = () => {
                 <img
                   src={product.img1}
                   alt="Product"
-                  className="mb-5 h-72 object-contain mx-auto"
+                  className="mb-5 h-60 object-contain mx-auto"
                 />
               </Link>
               <img src={product.image} alt="" className="h-8 object-contain mx-auto" />
@@ -83,10 +98,63 @@ const Special = () => {
       </div>
       </div>
     </div>
+</>
+   ):(
+    <>
+    <div className="w-full">
+    <div className="flex justify-center items-center flex-col gap-2 pt-8 pb-16">
+      <img src={img4} alt="" className="h-6"/>
+      <img src={img5} alt="" className="h-16"/>
+      <img src={img3} alt="" className="w-96"/>
+    </div>
 
-
-    <Ribben/>
-    </>
+    <div
+      style={{ backgroundImage: `url(${img1})` }}
+      className="bg-cover bg-center bg-[#660033] bg-no-repeat w-full h-[450px] md:min-h-[450px] relative flex flex-col items-center"
+    >
+      <img
+        src={img2}
+        alt="Maharashtra Theme"
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full min-h-10 md:w-4/5"
+      />
+<div className="relative w-full flex justify-center">
+    <div className="max-w-[1000px] w-full relative z-10 -my-10">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={10} 
+        slidesPerView={1} 
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 }, // Ensures 4 slides in the 800px width
+        }}
+        loop={true}
+        autoplay={{ delay: 2500 }}
+        navigation={false}
+        pagination={false}
+        className="w-full text-center"
+      >
+        {products.map((product, index) => (
+          <SwiperSlide key={index} className="flex flex-col items-center justify-center">
+            <Link to={ROUTES.COLLECTIONS} className="flex justify-center">
+              <img
+                src={product.img1}
+                alt="Product"
+                className="mb-5 h-72 object-contain mx-auto"
+              />
+            </Link>
+            <img src={product.image} alt="" className="h-8 object-contain mx-auto" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+    </div>
+    </div>
+  </div>
+   <Ribben/>
+   </>
+  )}
+</>
   );
 };
 

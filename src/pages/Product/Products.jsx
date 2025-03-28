@@ -59,12 +59,11 @@ const Products = () => {
                 <img src={img2} alt="" className='h-32' />
               </Link>
             </div>
-            <div className=' grid md:grid-cols-2 items-center justify-center'>
+            <div className=' grid md:grid-cols-2 items-center md:justify-center justify-start'>
               <div className=''>
                 <img src={collectionTitle}alt="" className='' />
               </div>
-
-            </div>
+       </div>
           </div>
         </div>
 
@@ -72,7 +71,7 @@ const Products = () => {
           <div className='flex justify-end pt-6'>
             <p className='font-light text-sm'>200 Results</p>
           </div>
-          <div className="flex min-h-screen px-6 flex-col sm:flex-row  py-15">
+          <div className="flex min-h-screen px-1 flex-col sm:flex-row  py-15">
             <div className="w-[284px]  p-4">
               <div className='border-b  '>
 

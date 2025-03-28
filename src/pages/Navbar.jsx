@@ -99,7 +99,7 @@ const Navbar = () => {
       initial={false}
       animate={isSticky ? "sticky" : "initial"}
       variants={navVariants}
-      className="z-10 transition-all duration-400 "
+      className="z-50 transition-all duration-400 "
     >
       <motion.div
         initial={false}
